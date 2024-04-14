@@ -61,8 +61,7 @@ composer require luckystar/crypto
 <td>createSecretIv</td>
 <td>Create a secret iv</td>
 <td>createSecretIv()</td>
-
-
+</tr>
 
 <tr>
 <td>createRandomString</td>
@@ -82,6 +81,19 @@ composer require luckystar/crypto
 <td>Create a random hex</td>
 <td>createRandomHex($length)</td>
 
+</tr>
+
+
+<tr>
+<td> createUuid </td>
+<td> Create a UUID </td>
+<td> createUuid() </td>
+</tr>
+
+<tr>
+<td> createRandomPassword </td>
+<td> Create a random password </td>
+<td> createRandomPassword($length = 10, $useLowercase = true, $useUppercase = true, $useNumbers = true, $useSymbols = true, $customChars = '!@#$%^&*()_+') </td>
 </tr>
 
 

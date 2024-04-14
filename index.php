@@ -28,6 +28,14 @@ echo "<br>";
 
 echo $crypto->createRandomHex(10);
 
+echo "<br>";
+
+echo $crypto->createUuid();
+
+echo "<br>";
+
+echo $crypto->createRandomPassword(12, true, true, true, true, '!@#$');
+
 
 
 

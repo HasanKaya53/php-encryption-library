@@ -81,4 +81,46 @@ class Crypto
 	public function createRandomHex($length = 10) {
 		return bin2hex(random_bytes($length));
 	}
+
+	public function createUuid(){
+		$uuid = md5(uniqid(mt_rand(), true));
+		$formatted_uuid = sprintf(
+			'%s-%s-%s-%s-%s',
+			substr($uuid, 0, 8),
+			substr($uuid, 8, 4),
+			substr($uuid, 12, 4),
+			substr($uuid, 16, 4),
+			substr($uuid, 20, 12)
+		);
+		return $formatted_uuid;
+	}
+
+
+	public function createRandomPassword($length = 10, $useLowercase = true, $useUppercase = true, $useNumbers = true, $useSymbols = true, $customChars = '!@#$%^&*()_+') {
+		// List of characters
+		$chars = '';
+		// Lowercase letters
+		if ($useLowercase) {
+			$chars .= 'abcdefghijklmnopqrstuvwxyz';
+		}
+		// Uppercase letters
+		if ($useUppercase) {
+			$chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		}
+		// Numbers
+		if ($useNumbers) {
+			$chars .= '0123456789';
+		}
+		// Symbols
+		if ($useSymbols) {
+			$chars .= $customChars;
+		}
+
+		// Generate the password
+		$password = '';
+		for ($i = 0; $i < $length; $i++) {
+			$password .= $chars[mt_rand(0, strlen($chars) - 1)];
+		}
+		return $password;
+	}
 }

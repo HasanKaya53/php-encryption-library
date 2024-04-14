@@ -37,5 +37,9 @@ echo "<br>";
 echo $crypto->createRandomPassword(12, true, true, true, true, '!@#$');
 
 
+echo "<br>";
+
+echo $crypto->createRandomUserName(5);
+
 
 

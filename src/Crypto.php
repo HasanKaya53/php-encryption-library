@@ -123,4 +123,10 @@ class Crypto
 		}
 		return $password;
 	}
+
+
+	public function createRandomUserName($length = 10) {
+		$randomString = $this->createRandomPassword($length, true , false , false ,false , '');
+		return $randomString;
+	}
 }

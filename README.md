@@ -93,7 +93,7 @@ composer require luckystar/crypto
 <tr>
 <td> createRandomPassword </td>
 <td> Create a random password </td>
-<td> createRandomPassword($length = 10, $useLowercase = true, $useUppercase = true, $useNumbers = true, $useSymbols = true, $customChars = '!@#$%^&*()_+') </td>
+<td> createRandomPassword($length = 10, $useLowercase = true, $useUppercase = true, $useNumbers = true, $useSymbols = true, $customChars = 'custom list') //!@#$%^&*()_+  </td>
 </tr>
 
 

@@ -64,4 +64,21 @@ class Crypto
 	public function createSecretKey() {
 		return bin2hex(random_bytes(16));
 	}
+
+	public function createSecretIv() {
+		return bin2hex(random_bytes(8));
+	}
+
+
+	public function createRandomString($length = 10) {
+		return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+	}
+
+	public function createRandomNumber($length = 10) {
+		return substr(str_shuffle(str_repeat($x='0123456789', ceil($length/strlen($x)) )),1,$length);
+	}
+
+	public function createRandomHex($length = 10) {
+		return bin2hex(random_bytes($length));
+	}
 }

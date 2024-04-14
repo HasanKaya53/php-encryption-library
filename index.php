@@ -15,6 +15,19 @@ echo $crypto->setSecretIv('00cccskmmx55')
 	->setSecretKey('00	cccxxx55')
 	->encrypt('Hello, World!')->getOutput();
 
+echo "<br>";
+
+echo $crypto->createRandomString(10);
+
+echo "<br>";
+
+echo $crypto->createRandomNumber(10);
+
+
+echo "<br>";
+
+echo $crypto->createRandomHex(10);
+
 
 
 

@@ -1,0 +1,15 @@
+{
+    "name": "luckystar/crypto",
+    "autoload": {
+        "psr-4": {
+            "LuckyStar\\Crypto\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hasankaya54",
+            "email": "me@hasankaya.info"
+        }
+    ],
+    "require": {}
+}
